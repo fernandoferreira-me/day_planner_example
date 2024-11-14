@@ -46,6 +46,8 @@ frozenlist==1.5.0
     # via
     #   aiohttp
     #   aiosignal
+geojson==2.5.0
+    # via pyowm
 gitdb==4.0.11
     # via gitpython
 gitpython==3.1.43
@@ -125,9 +127,7 @@ numpy==1.26.4
     #   pydeck
     #   streamlit
 openai==1.54.4
-    # via
-    #   -r requirements.in
-    #   langchain-openai
+    # via langchain-openai
 orjson==3.10.11
     # via langsmith
 packaging==24.2
@@ -163,6 +163,12 @@ pydeck==0.9.1
     # via streamlit
 pygments==2.18.0
     # via rich
+pyowm==3.3.0
+    # via -r requirements.in
+pysocks==1.7.1
+    # via
+    #   pyowm
+    #   requests
 python-dateutil==2.9.0.post0
     # via pandas
 python-dotenv==1.0.1
@@ -180,11 +186,12 @@ referencing==0.35.1
     #   jsonschema-specifications
 regex==2024.11.6
     # via tiktoken
-requests==2.32.3
+requests[socks]==2.32.3
     # via
     #   langchain
     #   langchain-community
     #   langsmith
+    #   pyowm
     #   requests-toolbelt
     #   streamlit
     #   tiktoken
